@@ -5,13 +5,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestClassifier
 
-# Load your dataset
+# Load dataset
 data = pd.read_csv("customer_churn.csv")
 if 'Churn' in data.columns:
     data['Churn'] = data['Churn'].map({'Yes': 1, 'No': 0})
 
 # Preprocessing: Identify categorical & numerical columns
-categorical_columns = ['gender']  # Update based on your dataset
+categorical_columns = ['gender']  # Update based on dataset
 numerical_columns = ['MonthlyCharges', 'TotalCharges']
 
 # One-Hot Encode categorical features
